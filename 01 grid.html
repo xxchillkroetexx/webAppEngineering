@@ -5,25 +5,32 @@
     <style>
         .grid {
             display: grid;
-            text-align: center;
-            grid-template-rows: 20% 60% 20%;
-            height: 40vh;
-        }
-
-        .container {
-            display: grid;
             grid-template-columns: 200px auto 200px;
+            grid-template-rows: 20vh 60vh 10vh;
+            gap: 20px;
         }
-
 
         header,
         nav,
         article,
         aside,
         footer {
-            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eee;
         }
 
+        header,
+        footer {
+            grid-column: 1 / 4;
+            /* span from column 1 (inclusive) to column 4 (exclusive) */
+        }
+
+        body {
+            margin: 1em;
+            font-size: 3em;
+        }
         header {
             background-color: aqua;
         }
@@ -50,11 +57,9 @@
 <body>
     <div class="grid">
         <header>Header</header>
-        <div class="container">
-            <nav class="sidebar-left">Navigation</nav>
-            <article>Main</article>
-            <aside class="sidebar-right">Right</aside>
-        </div>
+        <nav class="sidebar-left">Navigation</nav>
+        <article>Main</article>
+        <aside class="sidebar-right">Right</aside>
         <footer>Footer</footer>
     </div>
 
