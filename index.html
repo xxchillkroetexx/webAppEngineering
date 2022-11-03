@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .grid {
+            display: grid;
+            text-align: center;
+            grid-template-rows: 20% 60% 20%;
+            height: 40vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px auto 200px;
+        }
+
+
+        header,
+        nav,
+        article,
+        aside,
+        footer {
+            margin: 5px;
+        }
+
+        header {
+            background-color: aqua;
+        }
+
+        nav {
+            background-color: green;
+        }
+
+        article {
+            background-color: yellow;
+
+        }
+
+        aside {
+            background-color: red;
+        }
+
+        footer {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <header>Header</header>
+        <div class="container">
+            <nav class="sidebar-left">Navigation</nav>
+            <article>Main</article>
+            <aside class="sidebar-right">Right</aside>
+        </div>
+        <footer>Footer</footer>
+    </div>
+
+</body>
+
+</html>
